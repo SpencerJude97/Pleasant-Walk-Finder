@@ -74,8 +74,8 @@ def Set_Preferences():
 
         # current feature values and weightings
         print(f"\nCurrent preferences:")
-        print(f"  Temperature: {preferences['temp']['value']} (weighting: {preferences['temp']['weight']})")
-        print(f"  Humidity: {preferences['humidity']['value']} (weighting: {preferences['humidity']['weight']})")
+        for item in preferences.values():
+            print(f"  {item['name']}: {item['value']}{item['unit']} (weighting: {item['weight']})")
         input()
 
         # possible actions - alterations user can make
