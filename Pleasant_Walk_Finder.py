@@ -31,9 +31,8 @@ elements = []
 
 
 # get user's API key
-f = open("API_Key.txt")
-API_Key = f.read()
-f.close()
+with open("API_Key.txt") as f:
+    API_Key = f.read().strip()
 
 
 # main menu displayed on startup
